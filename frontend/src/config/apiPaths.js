@@ -1,0 +1,29 @@
+// BASE URL
+export const BASE_URL = 'http://localhost:8000';
+
+// API ENDPOINT PATHS
+export const API_PATHS = {
+  AUTH: {
+    REGISTER: '/api/v1/auth/register',               // Signup
+    LOGIN: '/api/v1/auth/login',                     // Authenticate user & return JWT token
+    GET_PROFILE: '/api/v1/auth/profile',             // Get logged-in user details
+  },
+  DASHBOARD:{
+    GET_DASHBOARD: '/api/v1/dashboard',
+  },
+  EXPENSES: {
+    ADD_EXPENSE: '/api/v1/expense/add',
+    GET_EXPENSES: '/api/v1/expense/get',
+    DELETE_EXPENSE:(id)=> `/api/v1/expense/${id}`,
+    DOWNLOAD_EXPENSES: '/api/v1/expense/download',
+  },
+  INCOMES: {
+    ADD_INCOME: '/api/v1/income/add',
+    GET_INCOMES: '/api/v1/income/get',
+    DELETE_INCOME:(id)=> `/api/v1/income/${id}`,
+    DOWNLOAD_INCOMES: '/api/v1/income/download',
+  },
+  IMAGE:{
+    UPLOAD_IMAGE: '/api/v1/image/upload',
+  }
+};
