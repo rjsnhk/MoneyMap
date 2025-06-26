@@ -67,7 +67,7 @@ Then run the backend:
 npm run dev
 ```
 
-The backend runs at: `http://localhost:5000/`
+The backend runs at: `http://localhost:8000/`
 
 ---
 
