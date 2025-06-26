@@ -1,5 +1,6 @@
 // BASE URL
-export const BASE_URL = 'http://localhost:8000';
+// export const BASE_URL = 'http://localhost:8000';
+export const BASE_URL = 'https://mm-backend-doq0.onrender.com';
 
 // API ENDPOINT PATHS
 export const API_PATHS = {
