@@ -26,7 +26,6 @@ export const API_PATHS = {
   },
   IMAGE:{
     UPLOAD_IMAGE: '/api/v1/image/upload',
-<<<<<<< HEAD
   },
   TRANSACTIONS: {
     BORROW_MONEY: '/api/v1/transaction/borrow',
@@ -38,7 +37,3 @@ export const API_PATHS = {
     DOWNLOAD_PERSON_HISTORY_EXCEL: (name) => `/api/v1/transaction/person/download/${name}`,
   },
 };
-=======
-  }
-};
->>>>>>> 55050ed16d6bb3eba33bc675f7014d09f8d647cf

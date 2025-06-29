@@ -349,7 +349,7 @@ const DebtTracker = () => {
                     {transaction.person?.name}
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
-                    {transaction.type === 'borrow' ? 'sent' : 'received'} • {formatDate(transaction.date)}
+                    {transaction.type === 'borrow' ? 'Spent' : 'Received'} • {formatDate(transaction.date)}
                   </p>
                   {transaction.description && (
                     <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 truncate">{transaction.description}</p>
@@ -557,7 +557,7 @@ const DebtTracker = () => {
                     </div>
                     <div className="flex-1">
                       <p className="font-medium text-gray-900 dark:text-white">
-                        {transaction.type === 'borrow' ? 'received' : 'spent'} 
+                        {transaction.type === 'borrow' ? 'Spent' : 'Received'} 
                       </p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">{formatDate(transaction.date)}</p>
                       {transaction.description && (
