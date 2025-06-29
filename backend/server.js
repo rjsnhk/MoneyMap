@@ -10,6 +10,7 @@ dotenv.config();
 const PORT = process.env.PORT || 5000;
 const app = express();
 const path = require('path');
+const transactionRouter = require('./routes/transactionRoutes');
 // Middleware
 app.use(cors({
     origin: process.env.CLIENT_URL||'*', // Allow all origins, adjust as needed
@@ -27,6 +28,7 @@ app.use('/api/v1/auth',authRouter)
 app.use('/api/v1/expense', expenseRouter);
 app.use('/api/v1/income', incomeRouter);
 app.use('/api/v1/dashboard', dashboardRouter);
+app.use('/api/v1/transaction', transactionRouter);
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // Serve static files from the uploads directory
 

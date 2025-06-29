@@ -10,7 +10,8 @@ import {
   LogOut, 
   Menu, 
   X,
-  Wallet
+  Wallet,
+  Users
 } from 'lucide-react';
 
 const Navbar = () => {
@@ -29,6 +30,7 @@ const Navbar = () => {
     { path: '/dashboard', label: 'Dashboard', icon: Home },
     { path: '/income', label: 'Income', icon: TrendingUp },
     { path: '/expenses', label: 'Expenses', icon: TrendingDown },
+    { path: '/debt-tracker', label: 'Debt Tracker', icon: Users },
   ];
 
   return (
@@ -39,7 +41,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
               <Wallet className="h-8 w-8 text-emerald-600 dark:text-emerald-400" />
-              <span className="ml-2 text-xl font-bold text-gray-800 dark:text-white">MoneyMap</span>
+              <span className="ml-2 text-xl font-bold text-gray-800 dark:text-white">ExpenseTracker</span>
             </div>
           </div>
 

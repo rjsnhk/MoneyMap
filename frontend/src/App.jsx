@@ -8,6 +8,7 @@ import AuthPage from './pages/AuthPage';
 import Dashboard from './pages/Dashboard';
 import Income from './pages/Income';
 import Expenses from './pages/Expenses';
+import DebtTracker from './pages/DebtTracker';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <Route path="dashboard" element={<Dashboard />} />
               <Route path="income" element={<Income />} />
               <Route path="expenses" element={<Expenses />} />
+              <Route path="debt-tracker" element={<DebtTracker />} />
             </Route>
             
             {/* Catch all route */}
