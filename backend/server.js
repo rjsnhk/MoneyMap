@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 const path = require('path');
 const transactionRouter = require('./routes/transactionRoutes');
+const axios=require("axios");
 // Middleware
 app.use(cors({
     origin: process.env.CLIENT_URL||'*', // Allow all origins, adjust as needed
@@ -22,6 +23,35 @@ app.use(express.json()); // Parse JSON bodies
 
 // Connect to the database
 connectDB();
+
+const url = `https://mm-backend-doq0.onrender.com`;
+const interval = 30000; // 30 seconds
+
+let lastReloadTime = "Not yet reloaded";
+
+function reloadWebsite() {
+  axios
+    .get(url)
+    .then(() => {
+      lastReloadTime = new Date().toLocaleString("en-IN", {
+        timeZone: "Asia/Kolkata",
+      });
+      console.log(`✅ Website reloaded at ${lastReloadTime}`);
+    })
+    .catch((error) => {
+      console.error(`❌ Error reloading website: ${error.message}`);
+    });
+}
+
+// call it repeatedly
+setInterval(reloadWebsite, interval);
+
+// optional: trigger once on startup
+reloadWebsite();
+
+app.get("/", (req, res) => {
+  res.send(`Last time website reloaded: ${lastReloadTime}`);
+});
 
 // Routes
 app.use('/api/v1/auth',authRouter)
